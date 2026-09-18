@@ -261,6 +261,21 @@ class HomeGuardiaScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                 ),
               ),
+
+              const SizedBox(height: 12),
+
+              // Botón de demostración para el docente: Simula la captura reactiva de HTTP 401 (Ítem 3)
+              TextButton.icon(
+                onPressed: () {
+                  authController.forzarCierreSesionPor401();
+                },
+                icon: const Icon(Icons.warning_amber_rounded,
+                    color: Color(0xFFFBBF24), size: 18),
+                label: const Text(
+                  'Simular error HTTP 401 (Demostración Ítem 3)',
+                  style: TextStyle(color: Color(0xFFFBBF24), fontSize: 12),
+                ),
+              ),
             ],
           ),
         ),
